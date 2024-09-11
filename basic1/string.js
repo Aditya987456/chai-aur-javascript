@@ -38,7 +38,7 @@ me implement karke
 let str5=new String(`buttan sarkar`)
 str5.toUpperCase()
 //console.log(result)
-console.log(str5)  //same str5 ki hi value ayega even if we converting in uppercase becz change copy me hua hai str5 ke na ki str5 me becz wkt string is primmitive using stack memory...
+// console.log(str5)  //same str5 ki hi value ayega even if we converting in uppercase becz change copy me hua hai str5 ke na ki str5 me becz wkt string is primmitive using stack memory...
 
 
 // let str6=new String(`buttan sarkar`)
@@ -52,8 +52,8 @@ console.log(str5)  //same str5 ki hi value ayega even if we converting in upperc
 //Behavior: If start is greater than end, it returns an empty string.
 
 let str7 = "Hello, World!";
-console.log(str7.slice(0, 5)); // "Hello"
-console.log(str7.slice(-6, -1)); // "World"
+// console.log(str7.slice(0, 5)); // "Hello"
+// console.log(str7.slice(-6, -1)); // "World"
 
 
 
@@ -61,6 +61,9 @@ console.log(str7.slice(-6, -1)); // "World"
 //Negative Indices: Treats negative indices as 0.
 //Behavior: If start is greater than end, it swaps the two arguments.
 
-let str8 = "Hello, World!";
-console.log(str8.substring(0, 5)); // "Hello"
-console.log(str8.substring(5, 0)); // "Hello" (arguments swapped)
+// let str8 = "Hello, World!";
+// console.log(str8.substring(0, 5)); // "Hello"
+// console.log(str8.substring(5, 0)); // "Hello" (arguments swapped)
+
+// console.log(str7.slice(-11, -3));  // llo, wor
+// console.log(str7.fontsize(70))      /***********not use this type types of things now...* */
