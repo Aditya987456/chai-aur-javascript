@@ -44,21 +44,51 @@
 
 // ****************shopping cart
 
-//function shopping_cart(...num){
-function shopping_cart(val1,val2, ...num){ //pahla two value argument ka val1 and val2 me jayega
+// //function shopping_cart(...num){
+// function shopping_cart(val1,val2, ...num){ //pahla two value argument ka val1 and val2 me jayega
 
-    return num
-}
+//     return num
+// }
 
-// const arr=(shopping_cart(100,200,300,400))
-// console.log(typeof arr)
-// console.log(arr)
+// // const arr=(shopping_cart(100,200,300,400))
+// // console.log(typeof arr)
+// // console.log(arr)
 
-console.log(shopping_cart(100,200,456,44456))
+// console.log(shopping_cart(100,200,456,44456))
 
 
 /*******************       Handling object in function     **************/
 
+// const user={
+//     name:"buttan",
+//     prices:456
+// }
+
+function cartprice(objUser){
+    console.log(`hello ${objUser.name} your cart price is ${objUser.prices}`)  
+}
+
+//+++++  we can also directly gives obj inside function argument during calling.
+
+
+
+
+cartprice({
+    name:"sarkar",
+    prices:852
+})
+
+
+//  +++++++ handling array..........
+
+const arr=[12,36,14,786,459]
+
+function return2nd_ele(arrs){
+    return arrs[1]
+}
+
+let result=return2nd_ele(arr)
+console.log(result)
 
 
 
