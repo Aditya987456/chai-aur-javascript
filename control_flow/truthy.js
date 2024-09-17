@@ -1,10 +1,10 @@
-const userEmail=[]
+// const userEmail=[]
 
-if(userEmail){
-    console.log("got usergmail")
-}else{
-    console.log("Don't get user gmail")
-}
+// if(userEmail){
+//     console.log("got usergmail")
+// }else{
+//     console.log("Don't get user gmail")
+// }
 
 
 
@@ -36,9 +36,9 @@ if(userEmail){
 // const val2=null??10??50
 
 
-// //---------------  Ternary operator.
+//---------------  Ternary operator.
 
-// const number=97
-// 97>90? console.log("grade 'A' "):console.log("grade 'B' ")
+const number=97
+97>90? console.log("grade 'A' "):console.log("grade 'B' ")
 
 
