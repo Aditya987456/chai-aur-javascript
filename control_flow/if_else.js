@@ -29,4 +29,4 @@ function findgrade(num,name){
     }
 }
 
-findgrade(79.9,"Buttan sarkar")
+findgrade(100,"Buttan sarkar")
