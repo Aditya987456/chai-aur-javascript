@@ -16,6 +16,7 @@
 
 //console.log(this)  //curly bracket in vscode but in console it gives---> window
 
+
 // const chai=function(){
 //     let username="aman"
 //     console.log(this);
