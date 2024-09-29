@@ -1,0 +1,53 @@
+<!--          CREATING NEW ELEMENT IN DOM       -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM creating elements</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    
+</body >
+
+
+
+
+<script>
+
+    const parent=document.createElement('main')
+    console.log(parent)
+    //parent.id='random'
+    parent.className='mainparent'
+    parent.setAttribute("id","id_hai_bhai")  //aise bhi kuch  bhi de sakte hai key pair me i.e id,classname,title
+    parent.title='title_Hai'
+    parent.style.backgroundColor='blue'
+
+
+    //aise bhi kar sakte hai text add
+       // parent.innerText='BUTTAN SARKAR'  
+   
+   //also by appending child to parent
+    const addtext=document.createTextNode('ha_ya_haa')
+    parent.appendChild(addtext)
+
+    document.body.appendChild(parent)
+
+
+
+
+    /* 
+
+    we can also wrap up all these thing in a function like name as (createNewdiv) and take as argument 
+    of text and bcg and also traverse a loop that take color and text and do all this...
+       */
+    
+
+</script>
+
+
+
+</html>

@@ -1,0 +1,92 @@
+<!--            Edit and Remove Elements in DOM        -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM edit and remove.</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;" >
+
+
+    <ul class="language">
+        <li>JAVASCRIPT</li>
+        
+
+    </ul>
+   
+
+    
+    
+</body>
+
+
+
+
+<script>
+
+  /* this type of method is not good for high level project becz when we write innerhtml
+    then it have to traverse whole list then add text  
+   
+    function addlang(lang){
+        const list_item=document.createElement('li')
+        list_item.innerHTML=`${lang}`
+        document.querySelector('.language').appendChild(list_item)
+    }
+*/
+
+
+
+//this method is best i.e append becz it does not have to traverse whole to add list
+
+    function addlang(lang){
+        const list_item=document.createElement('li')
+        const add_text=document.createTextNode(`${lang}`)
+        list_item.appendChild(add_text)
+        document.querySelector('.language').appendChild(list_item)
+    }
+
+    addlang('c++')
+    addlang('rust')
+    addlang('java')
+
+
+    //******************  edit--> replace, li:nth-child(5/1/2), li:first-child
+
+    //edit-1
+
+    //const secondLang = document.querySelector("li:nth-child(2)")
+    const secondlang=document.querySelector('.language').children[2]
+    // console.log(secondlang)
+    const newlang=document.createElement('li')
+    newlang.innerHTML='swift-------'
+    secondlang.replaceWith(newlang)
+
+
+
+
+    //edit-2
+
+    const firstLang = document.querySelector("li:first-child")
+    //console.log(firstLang)
+    firstLang.outerHTML='<li>TYPESCRIPT</li>'
+//yaha pe replace nahi lagaya why??????????????
+
+
+
+
+
+// ************************   Remove  --->   
+
+const lang2=document.querySelector('.language').lastElementChild
+//console.log(lang2)
+lang2.remove()
+console.log(document.querySelector('.language').children[3])
+
+
+    
+</script>
+</html>
