@@ -8,7 +8,10 @@ Project related to DOM using Javascript, CSS and HTML. In which when we click on
 ## **Project Sample**
 
 
+
 <video controls src="Screen Recording 2024-10-02 204529.mp4" title="Title"></video>
+
+
 
 
 
