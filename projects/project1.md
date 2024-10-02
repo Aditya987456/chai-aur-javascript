@@ -7,6 +7,8 @@ Project related to DOM using Javascript, CSS and HTML. In which when we click on
 ---
 ## **Project Sample**
 
+https://github.com/user-attachments/assets/1895d1ae-4d95-4593-9041-753aee0d868f
+
 
 
 <video controls src="Screen Recording 2024-10-02 204529.mp4" title="Title"></video>
