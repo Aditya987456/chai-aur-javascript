@@ -1,6 +1,6 @@
 .container {
-    width: 575px;
-   height: 825px; 
+    width: 575vw;
+   height: 825vh; 
   
    /* background-color: #797978; */
    background-color:rgb(130, 128, 128);
