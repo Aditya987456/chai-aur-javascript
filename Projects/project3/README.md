@@ -5,4 +5,4 @@ In this project i make a digital clock that shows realtime when we use it. It ma
 
 
 ## *Project Sample*
->[Project link](https://simple-realtime-clock.netlify.app/)
+>[Project link](https://realtime-clock.netlify.app/)
