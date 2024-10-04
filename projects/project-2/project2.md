@@ -8,3 +8,7 @@ A BMI calculator project in which when user entered its height and weight and cl
 ##  *project sample-*
 
 >[Project link](https://bmi-index-cal.netlify.app/)
+
+
+
+<video controls src="Screen Recording 2024-10-03 224948.mp4" title="Title"></video>
