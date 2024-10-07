@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning events</title>
+</head>
+
+<body>
+
+    <div id="page">
+
+        <ul>
+            <li><img  style="height:200px;"  id="pic1" src="https://images.pexels.com/photos/247791/pexels-photo-247791.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="coding"></li>
+           
+            <li><img  style="height:200px; width: 200px;"  id="pic2" src="https://images.pexels.com/photos/16027824/pexels-photo-16027824/free-photo-of-chat-gpt-welcome-screen-on-computer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+
+            <li><img style="height:200px; width: 200px;" id="pic3" src="https://images.pexels.com/photos/18148937/pexels-photo-18148937/free-photo-of-vintage-tram-on-a-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+
+            <li> <a href="https://guessing-numgame.netlify.app/">My_game</a> </li>
+        </ul>
+
+    </div>
+
+    <script>
+
+//here event propagation happens as we know that bubbling up  i.e firstly pic2 clicked then page and also becz capturing is off i.e third parameter in event is by default false hota hai 
+//agar true kar diya then bubbling up not happens i.e top se bottom jayega therefore pagle page then pic2...
+//⭐ ---------->>>>>  agar page true hua aur pic2 false then bhi capturing hoga...✔️
+
+// document.querySelector('#page').addEventListener('click', (e)=>{
+//             //alert(`pic2 is clicked`)
+//             console.log("page is clicked------")
+           
+//         },false )
+
+// document.querySelector('#pic2').addEventListener('click', (e)=>{
+//             //alert(`pic2 is clicked`)
+//             console.log("pic2 is clicked------")
+//             e.stopPropagation() //ab propagate hoke page me nahi jayega....
+//         },false )
+        
+
+
+
+
+//*****************         | img delete when we click on the image.....|           **********************************
+
+document.addEventListener('click', (e)=>{
+     //console.log(e.target.parentNode)
+
+
+    if(e.target.tagName==='IMG'){
+       // console.log(e.target.id)   //sab IMG hi hoga...
+       
+        let delete_img=e.target.parentNode
+        delete_img.remove()
+    }
+
+
+}, false)
+
+
+
+
+
+
+    </script>
+    
+</body>
+
+</html>
