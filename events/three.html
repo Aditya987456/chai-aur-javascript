@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Async JS</title>
+</head>
+
+<body>
+
+    <h1 id="heading">Small Project of Async JS</h1>
+
+    <button id="start">Start</button>
+    <button id="end">End</button>
+
+</body>
+
+<script>
+let interval_ev;
+
+
+const sayName = function(str) {
+    console.log(`Hello ${str}, welcome...`, new Date().toLocaleTimeString());
+}
+
+// Start button event listener
+const start = document.querySelector('#start');
+start.addEventListener('click', (e) => {
+
+    if (!interval_ev) { // **************Check if interval is already running
+        interval_ev = setInterval(sayName, 1000, 'Aditya Raj');
+    }
+
+}, false);
+
+// End
+const stopIt = document.querySelector('#end');
+stopIt.addEventListener('click', (e) => {
+    clearInterval(interval_ev);
+
+    interval_ev = null; // *************** Reset the interval variable
+}, false);
+</script>
+
+</html>

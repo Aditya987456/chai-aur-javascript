@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async js</title>
+</head>
+
+<body>
+    <h1 id="heading" > Learning Asynchronous JS</h1>
+    <button id="btn" > STOP </button>
+    
+</body>
+
+<script>
+console.log("welcome")
+    const greeting=function(){
+        console.log("helllloooooooo  my friend !")
+    };
+
+    const timegreeting=setTimeout(greeting,500);
+
+    const butn=document.querySelector('#btn')
+    butn.addEventListener('click' ,(e)=>{
+        clearTimeout(timegreeting)  //timeou will not perform if we stoped it by clicking on button.
+        console.log('cleared')
+    },false)
+
+</script>
+
+</html>
