@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+
+<body>
+
+<!-- 
+
+    0	UNSENT	            Client has been created. open() not called yet.
+    1	OPENED           	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	            Downloading; responseText holds partial data.
+    4	DONE	            The operation is complete.
+    
+    
+    -->
+
+</body>
+
+<script>
+
+/*
+
+XMLHttpRequest is a javascript object that allows you to make HTTP request to a server and load the response data back into your web page without reloading the entire page.
+
+*/
+
+
+
+//step-1 :  create an XMLHttpRequest object.
+            let xhr=new XMLHttpRequest()
+            console.log(xhr.readyState, 'zero')  //'0' -> open() not called
+
+
+//step-2 :  open a request, also specify type of request-GET,POST and if Async then true and sync then false.
+            const linkapi= 'https://api.github.com/users/hiteshchoudhary'
+           // https://api.github.com/users/hiteshchoudhary/repos
+           
+            xhr.open('GET', linkapi)   //open a request
+
+           console.log(xhr.readyState, '1')  //'1' -> open() called i.e initialize
+
+
+
+        
+/*  ---------------------------------------------*IMPORTANT*----------------------------------------------------------------------
+
+ Sometimes Handlers before send() ensures that your code is ready to handle the response as soon as it arrive.if you call send() first and then set up handlers, there's a risk that response might arrive before the handlers are set up, especially if the server responds very quickly.
+
+*/
+
+
+
+
+ //step-4 :  Handle the response....
+
+            xhr.onreadystatechange = function(){
+                // xhr.onload = function(){
+                console.log(xhr.readyState)    //'3'
+
+                if(xhr.readyState===4){
+                   // console.log(this.responseText)
+                   
+                     const allData=JSON.parse(this.responseText)
+                    console.log(allData.avatar_url)
+                    console.log(allData.followers)
+
+                }
+
+           } 
+
+
+
+        
+        
+
+
+
+        
+      
+//step-3 :  Send the request...
+           xhr.send()
+            console.log(xhr.readyState, 'send request')   
+
+
+
+</script>
+
+
+
+</html>
