@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px; 
+            text-align: center;
+            width: 300px;
+            height: 300px;
+        }
+        .card h2 {
+            margin: 40px 0 30px;  /**/
+        }
+        .card p {
+            color: #666;
+            margin: 30px 0 30px;
+        }
+        .card button {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+        .card button:hover {
+            background-color: #0056b3;
+        }
+
+        #apiIMG{
+            width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+        }
+
+    #bio{
+        font-size: medium;
+       
+        margin-bottom: 0px;
+        color: rgb(0, 0, 14);
+    }
+
+    #bio:hover{
+        color: rgb(0, 96, 0);
+    }
+
+    #apiIMG:hover{
+        color: blue;
+        border: solid 3px;
+    }
+
+ #followers{
+    border: solid 2px;
+    font-weight:bold;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 7px;
+   
+ }
+
+ #followers:hover{
+    background-color: rgb(192, 242, 225);
+ }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <h2>Hitesh Choudhary API</h2>
+        <p>CLICK on button to see details from API</p>
+        <button>Click Me</button>
+
+    </div>
+
+</body>
+
+<script>
+
+    const hiteshAPI='https://api.github.com/users/hiteshchoudhary'
+    const xhr=new XMLHttpRequest();
+    
+    const butn=document.querySelector('button')
+    butn.addEventListener( 'click' , (e)=>{
+        e.preventDefault();
+        //console.log(e)
+        xhr.open('GET', hiteshAPI, true);
+
+        xhr.onreadystatechange=function(){
+            console.log(xhr.readyState)
+            
+            if(xhr.readyState === 4){
+                const data=JSON.parse(this.responseText)  //current context ke liye 'this' 
+                // console.log(data)   //-----> ye pura de dega jo bhi api me methods hai....
+                // const followers=data.followers
+                // const img=data.avatar_url
+                // const bio=data.bio
+                // console.log(followers)
+
+                document.querySelector('.card').innerHTML=` <div class='data' >
+                    <img id='apiIMG' src=${data.avatar_url}>
+                    <h3>NAME: ${data.name}</h3>
+                    <p id='bio' >BIO: ${data.bio}</p>
+                    <p id='followers' >Followers: ${data.followers}</p>
+
+                    </div> `;
+
+            }
+        };
+        xhr.send()
+
+    } , false)
+
+</script>
+
+</html>
