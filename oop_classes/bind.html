@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bind </title>
+</head>
+
+<body>
+
+    <button>click Me!</button>
+    
+</body>
+
+<script>
+
+    class react{
+
+        constructor(){
+            this.greeting="hello ji"
+
+            this.library="React"
+            this.server="https://localhost:300"
+
+            document.querySelector('button').addEventListener('click', this.handleclk.bind(this))
+        }
+
+        /*
+
+        NOTE - binding to the handleclk so that it can take the reference of this which is
+                this.server,this.library  etc.
+
+                ** why not call??
+
+                    becz agar reference pura hi naya kar diya too problem ho jayega ki wo button
+                    ka pata hi nahi rahega ki konse button ne click kara tha. i.e here
+                    $ hum handleclk ke sath humne this bhi bhej diya(constructor wala ...)
+        
+        
+        */
+
+        handleclk(){
+            console.log("button pressed.")
+            console.log(this)
+            console.log(this.greeting)
+            console.log(this.server)
+        }
+    }
+
+
+    const customer = new react();
+    // customer.handleclk()
+
+</script>
+
+
+
+</html>
