@@ -8,7 +8,7 @@ class user{
         console.log(`hello ${this.username} sirji.`)
     }
 
-    static EncryptName(){
+    static EncryptName(){    //it will not give access to any object .
         console.log(`${this.username} is encrypted into -> 123456`)
     }
 
